@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Test</title>
+	<script type="text/javascript">
+
+        // Called on form's `onsubmit`
+        function tosubmit() {
+            // Getting the value of your text input
+            var username = document.getElementById("userName").value;
+			// Storing the value above into localStorage
+			localStorage.setItem("userName", username);
+
+			var dateOfBirth = document.getElementById("dob").value;
+			localStorage.setItem("dob", dateOfBirth);
+
+			var addrr = document.getElementById("address").value;
+			localStorage.setItem("address", addrr);
+
+			var student_non  = document.getElementById("student_Non").value;
+			localStorage.setItem("student_Non", student_non );
+
+			var Game = document.getElementById("game").value;
+			localStorage.setItem("game", Game);
+
+			var number = document.getElementById("number").value;
+			localStorage.setItem("number", number);
+
+
+			var time = document.getElementById("time").value;
+			localStorage.setItem("time", time);
+
+			
+			
+			// localStorage.setItem("upload_image", image);
+
+
+	        var imageStore = document.getElementById("userImage").src;
+
+	        localStorage.setItem("user_image", imageStore);
+
+
+			return true;
+		}
+
+	</script> 
+</head>
+<body>
+	<center>   
+		<!-- INLCUDING `ONSUBMIT` EVENT + ACTION URL --> 
+		<form name="myform" onsubmit="tosubmit();" action="output.html">
+			<input type="text" id="userName" placeholder="Name" /><br />
+			<input type="text" id="dob" placeholder="Date of Birth"><br />
+			<input type="text" id="address" placeholder="Residence of"><br />
+			<input type="text" id="student_Non" placeholder="Student/Non Student"><br />
+			<input type="text" id="game" placeholder="Game"></br>
+			<input type="number" id="number" placeholder="Mob/Ph"> <br />
+			<input type="number" id="time" placeholder="Timing"><br />
+			<input class="upload_image" type="file" onchange="document.getElementById('userImage').src = window.URL.createObjectURL(this.files[0]);">
+			<div class="user_image">
+				<img id="userImage" class="userImage"><br />
+			</div>
+			<div class="submit-section">
+				<button type="submit" class="generate_pass">Generate Pass</button>
+			</div>
+
+		</form>
+	</body>
+	</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+
+    // Called on body's `onload` event
+    function init() {
+        // Retrieving the text input's value which was stored into localStorage
+        document.getElementById("username").innerHTML = localStorage.getItem("userName");
+        document.getElementById("DOB").innerHTML = localStorage.getItem("dob");
+        document.getElementById("Adress").innerHTML = localStorage.getItem("address");
+        document.getElementById("Student_Nom").innerHTML = localStorage.getItem("student_non");
+        document.getElementById("game").innerHTML = localStorage.getItem("game");
+        document.getElementById("number").innerHTML = localStorage.getItem("number");
+        document.getElementById("time").innerHTML = localStorage.getItem("time");
+       	
+       	var show = document.getElementById("tableBanner");
+       
+       	show.src = localStorage.getItem("user_image");
+
+    }
+        // Writing the value in the document
+        
+
+</script>
+</head>    
+
+<body onload="init()";>
+<p id="username"></p>
+<p id="DOB"></p>
+<p id="Adress"></p>
+<p id="Student_Nom"></p>
+<p id="game"></p>
+<p id="number"></p>
+<p id="time"></p>
+<div id="image"></div>
+<img id="tableBanner" />
+</body>
+
+</html>
